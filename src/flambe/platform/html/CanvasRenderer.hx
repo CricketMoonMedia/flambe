@@ -89,7 +89,8 @@ class CanvasRenderer
         // On iOS, canvas textures are way faster
         // http://jsperf.com/drawimage-vs-canvaspattern/8
         var pattern = ~/(iPhone|iPod|iPad)/;
-        return pattern.match(Browser.window.navigator.userAgent);
+        return false;
+        // return pattern.match(Browser.window.navigator.userAgent);
     })();
 
     private var _hasGPU :Value<Bool>;
